@@ -1,6 +1,7 @@
 # TODO: Homework: Rewrite a program with any number of digits.
 #  Instead of  3 digits, you should sum digits up from n digits number,
 #  Where  User enters n manually. n > 0
+#
 
 from random import randint
 
