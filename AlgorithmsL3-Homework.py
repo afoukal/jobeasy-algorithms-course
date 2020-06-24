@@ -14,18 +14,17 @@ def char_count(char,string):
 
 
 # Find and replace a substring in a string for another substring. User enter from a keyboard a string and both substrings. DON’T USE METHOD REPLACE
-# string2 = 'hello world'
-# old = 'world'
-# new = 'Ana'
-# result = []
-# # for i in range(len(string2)):
-# #     if string2[i:i+len(old)] != old:
-# #         result.append(string2[i])
-# #     else:
-# #         string2[i:i + len(old)] = new
-# #         result.append(string2[i:i+len(old)])
-# # print(result)
-# print(string2.replace(old, new))
+string2 = 'hello world hello mello'
+old = 'llo'
+new = 'www'
+for index in range(len(string2)):
+    if string2[index:(index+len(old))] == old:
+        string2 = string2[0:index] + new + string2[(index+len(old)):len(string2)]
+
+print(string2)
+
+
+#print(string2.replace(old, new))
 
 # Write a function for decompressing string “a4b3c2d”
 str_1 = 'a4b3cvf4'
