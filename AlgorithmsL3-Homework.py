@@ -27,7 +27,7 @@ print(string2)
 #print(string2.replace(old, new))
 
 # Write a function for decompressing string “a4b3c2d”
-str_1 = 'a4b3cvf4'
+str_1 = 'a14b3cvf4'
 
 def decompression_function(str):
     result = ''
@@ -42,23 +42,19 @@ def decompression_function(str):
     return result
 
 
-# print(decompression_function(str_1))
+print(decompression_function(str_1))
 
 # Recursion for Fib, factorial, digital root
 
 # Fib
-num_3 = 9
+num_3 = 6
 def fibonacci_seq(num):
-    fib1 = 0
-    fib2 = 1
-    if num == 1:
-        return fib1
-    elif num == 2:
-        return fib2
+    if num <= 2:
+        return 1
     else:
         return fibonacci_seq(num-1)+fibonacci_seq(num-2)
 
-#print(fibonacci_seq(num_3))
+print(fibonacci_seq(num_3))
 
 # Factorial
 number_1 = 4
@@ -66,7 +62,7 @@ number_1 = 4
 def factorail(num):
     if num < 0:
         return "Are you sure you want to calculate Gamma functions"
-    elif num == 1:
+    elif num == 0:
         return 1
     else:
         result = factorail(num-1) * num
