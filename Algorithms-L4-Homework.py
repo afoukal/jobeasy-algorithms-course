@@ -1,13 +1,28 @@
 # Enter a string of words separated by spaces. Find the longest word. ###### I have found the first longest word, not the last one :)
 
-str_1 = '  Hello     world I love                  Python Today is a good    weather    blablab'
+str_1 = '  Hello     world I love                  Python Today is a good    weather   blablaa'
+
+
+# def longest_word(string):
+#     longest_word = ''
+#     for item in string.split(' '):
+#         if len(item) > len(longest_word):
+#             longest_word = item
+#     return longest_word
 
 def longest_word(string):
     longest_word = ''
+    longest_words = []
     for item in string.split(' '):
         if len(item) > len(longest_word):
-            longest_word = item
-    return longest_word
+                longest_word = item
+    for i in string.split(' '):
+        if len(i) == len (longest_word):
+            longest_words.append(i)
+    if len(longest_words) == 1:
+        return longest_words[0]
+    else:
+        return longest_words
 
 
 print(longest_word(str_1))
